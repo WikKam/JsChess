@@ -1,0 +1,26 @@
+{
+  "name": "jschess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WikKam/JsChess.git"
+  },
+  "author": "Wiktor Kamiński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WikKam/JsChess/issues"
+  },
+  "homepage": "https://github.com/WikKam/JsChess#readme",
+  "dependencies": {
+    "@chrisoakman/chessboardjs": "^1.0.0",
+    "chess.js": "^0.10.3",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  }
+}
