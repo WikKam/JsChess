@@ -34,6 +34,10 @@ io.on('connection', (socket) => {
        enemySocket.emit('move', msg.move);
     })
 
+    socket.on('game over', (playerName) => {
+        playersMap.get(playerName).currentOpponent = '';
+    })
+
     socket.on('disconnect', () => {
         disconnectedPlayer = findPlayerWithSocket(socket);
         if(disconnectedPlayer){
@@ -52,10 +56,10 @@ io.on('connection', (socket) => {
     //join queue message
     socket.on('join queue',(msg) => {
         if(playersMap.has(msg)){
-            socket.emit('error', 'name is already taken');
+            socket.emit('err', 'name is already taken');
         }
         else if(players.length == MAX_PLAYERS_NO){
-            socket.emit('error', 'server is full. Come back a moment later!');
+            socket.emit('err', 'server is full. Come back a moment later!');
         }
         else{
             player = {

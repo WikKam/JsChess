@@ -8,11 +8,20 @@
     <title>Chess</title>
 </head>
 <body>
-        <form id = nameForm>
-            <input id = 'name' type = 'text' placeholder="Enter your name!">
-            <input id = 'joinQueue' type = 'button' value = "Submit!">
-        </form>
+    <div id = 'top'>
+        <h1>JSChess</h1>
+        <a id = 'link' href = https://github.com/WikKam/JsChess target="_blank">Visit my Github!</a>
+    </div>
+    <div id = 'content'>
+    <form id = nameForm>
+        <input id = 'name' type = 'text' placeholder="Enter your name!">
+        <input id = 'joinQueue' type = 'button' value = "Submit!">
+    </form>
+    <span id = 'showMove'></span>
     <div id = "gameBoard" style = "width: 400px"></div>
+    </div>
+    <footer id = 'image-holder'>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
     <script src = "bundle.js"></script>
